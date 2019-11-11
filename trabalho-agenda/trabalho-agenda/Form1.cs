@@ -16,5 +16,26 @@ namespace trabalho_agenda
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditorXML<Paciente> editorXML = new EditorXML<Paciente>();
+            List<Paciente> lista = new List<Paciente>();
+            Paciente paciente = new Paciente();
+            paciente.Nome = textBox1.Text;
+            paciente.CPF = textBox2.Text;
+            lista.Add(paciente);
+            editorXML.serializar(lista, "pacientes.xml");
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
