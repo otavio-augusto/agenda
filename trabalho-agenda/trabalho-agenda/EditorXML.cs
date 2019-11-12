@@ -19,18 +19,18 @@ namespace trabalho_agenda
             XmlSerializer serializer = new XmlSerializer(lista.GetType());
             XElement Raiz = XElement.Load(arquivo);
             XElement xElement;
-            using (var stream = new MemoryStream())
+            using (var stream = new MemoryStream())   //Memory Stream usa a memoria ao inves de arquivo.
             {
-                serializer.Serialize(stream, lista);
+                serializer.Serialize(stream, lista);  //Salva os dados serializados na memoria.
                 stream.Position = 0;
 
-                using (XmlReader reader = XmlReader.Create(stream))
+                using (XmlReader reader = XmlReader.Create(stream))//Cria um leitor de XML
                 {
-                    xElement = XElement.Load(reader);
+                    xElement = XElement.Load(reader); //Cria um XElement apartir do "arquivo" na memoria.
                 }
             }
-            Raiz.Add(xElement.Elements());
-            Raiz.Save(arquivo);
+            Raiz.Add(xElement.Elements());  //Adiciona o XElement
+            Raiz.Save(arquivo);             // Salva
         }
 
         public List<T> deserializar(string arquivo)
