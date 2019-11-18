@@ -22,7 +22,7 @@ namespace trabalho_agenda
             Usuario User = new Usuario();
             User.CPF = mskdCPF.Text;
             User.Nome = txtNome.Text;
-            User.EMail = txtMail.Text;
+            User.Email = txtMail.Text;
             User.Telefone = txtTelefone.Text;
             User.Senha = txtSenha.Text;
 
@@ -45,7 +45,7 @@ namespace trabalho_agenda
             }
             else
             {
-
+                Ed.Serializar(User, "usuarios.xml");
             }
 
         }
