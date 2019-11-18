@@ -37,5 +37,22 @@ namespace trabalho_agenda
         {
 
         }
+
+        private void cadastrarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastroPaciente Form = new FormCadastroPaciente();
+            Form.Show();
+        }
+
+        private void cadastrarMédicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cadastrarConsultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastroConsulta Form = new FormCadastroConsulta();
+            Form.Show();
+        }
     }
 }
