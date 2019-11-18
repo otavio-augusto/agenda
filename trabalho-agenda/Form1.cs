@@ -28,16 +28,6 @@ namespace trabalho_agenda
             editorXML.Serializar(lista, "pacientes.xml");
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cadastrarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCadastroPaciente Form = new FormCadastroPaciente();
