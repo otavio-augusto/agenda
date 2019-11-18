@@ -187,9 +187,9 @@
             this.lblMail.AutoSize = true;
             this.lblMail.Location = new System.Drawing.Point(10, 115);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(36, 16);
+            this.lblMail.Size = new System.Drawing.Size(49, 16);
             this.lblMail.TabIndex = 15;
-            this.lblMail.Text = "Mail:";
+            this.lblMail.Text = "E-Mail:";
             // 
             // lblTelefone
             // 

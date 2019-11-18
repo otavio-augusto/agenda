@@ -39,7 +39,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.mskdCPF = new System.Windows.Forms.MaskedTextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkPrim = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -68,21 +68,21 @@
             // cadastrarPacienteToolStripMenuItem
             // 
             this.cadastrarPacienteToolStripMenuItem.Name = "cadastrarPacienteToolStripMenuItem";
-            this.cadastrarPacienteToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.cadastrarPacienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarPacienteToolStripMenuItem.Text = "Cadastrar paciente";
             this.cadastrarPacienteToolStripMenuItem.Click += new System.EventHandler(this.cadastrarPacienteToolStripMenuItem_Click);
             // 
             // cadastrarMédicoToolStripMenuItem
             // 
             this.cadastrarMédicoToolStripMenuItem.Name = "cadastrarMédicoToolStripMenuItem";
-            this.cadastrarMédicoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.cadastrarMédicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarMédicoToolStripMenuItem.Text = "Cadastrar médico";
             this.cadastrarMédicoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarMédicoToolStripMenuItem_Click);
             // 
             // cadastrarConsultaToolStripMenuItem
             // 
             this.cadastrarConsultaToolStripMenuItem.Name = "cadastrarConsultaToolStripMenuItem";
-            this.cadastrarConsultaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.cadastrarConsultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarConsultaToolStripMenuItem.Text = "Cadastrar consulta";
             this.cadastrarConsultaToolStripMenuItem.Click += new System.EventHandler(this.cadastrarConsultaToolStripMenuItem_Click);
             // 
@@ -120,7 +120,7 @@
             this.groupBox1.Controls.Add(this.mskdCPF);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.linkPrim);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(27, 69);
             this.groupBox1.Name = "groupBox1";
@@ -144,15 +144,16 @@
             this.mskdCPF.Size = new System.Drawing.Size(123, 22);
             this.mskdCPF.TabIndex = 9;
             // 
-            // linkLabel1
+            // linkPrim
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(20, 150);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(106, 16);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Primeiro acesso";
+            this.linkPrim.AutoSize = true;
+            this.linkPrim.Location = new System.Drawing.Point(20, 150);
+            this.linkPrim.Name = "linkPrim";
+            this.linkPrim.Size = new System.Drawing.Size(106, 16);
+            this.linkPrim.TabIndex = 7;
+            this.linkPrim.TabStop = true;
+            this.linkPrim.Text = "Primeiro acesso";
+            this.linkPrim.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPrim_LinkClicked);
             // 
             // btnLogin
             // 
@@ -199,7 +200,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.MaskedTextBox mskdCPF;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkPrim;
         private System.Windows.Forms.Button btnLogin;
     }
 }

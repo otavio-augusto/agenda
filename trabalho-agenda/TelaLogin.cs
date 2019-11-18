@@ -37,22 +37,22 @@ namespace trabalho_agenda
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Medico Med = new Medico();
-            Med.CPF = mskdCPF.Text;
-            Med.Senha = txtSenha.Text;
+            Usuario User = new Usuario();
+            User.CPF = mskdCPF.Text;
+            User.Senha = txtSenha.Text;
 
-            EditorXML<Medico> Ed = new EditorXML<Medico>();
-            List<Medico> ListMedicos = Ed.Deserializar("medicos.xml");
+            EditorXML<Usuario> Ed = new EditorXML<Usuario>();
+            List<Usuario> ListUsuarios = Ed.Deserializar("usuarios.xml");
 
             bool AchouCPF = false;
             bool AchouSenha = false;
 
-            foreach (Medico x in ListMedicos)
+            foreach (Usuario x in ListUsuarios)
             {
-                if (Med.CPF == x.CPF)
+                if (User.CPF == x.CPF)
                 {
                     AchouCPF = true;
-                    if (Med.Senha == x.Senha)
+                    if (User.Senha == x.Senha)
                     {
                         AchouSenha = true;                        
                     }
@@ -67,6 +67,12 @@ namespace trabalho_agenda
                 MessageBox.Show("Usuário ou senha incorretos!");
             }
        
+        }
+
+        private void linkPrim_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadastroUser PrimeiroAcesso = new CadastroUser();
+            PrimeiroAcesso.Show();
         }
     }
 }
