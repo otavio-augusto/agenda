@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimeNascimento = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.maskedTextCPF = new System.Windows.Forms.MaskedTextBox();
@@ -55,7 +56,6 @@
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblRua = new System.Windows.Forms.Label();
             this.lblCEP = new System.Windows.Forms.Label();
-            this.dateTimeNascimento = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,14 @@
             this.groupBox1.Size = new System.Drawing.Size(391, 432);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // dateTimeNascimento
+            // 
+            this.dateTimeNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeNascimento.Location = new System.Drawing.Point(9, 170);
+            this.dateTimeNascimento.Name = "dateTimeNascimento";
+            this.dateTimeNascimento.Size = new System.Drawing.Size(126, 22);
+            this.dateTimeNascimento.TabIndex = 27;
             // 
             // button2
             // 
@@ -313,21 +321,13 @@
             this.lblCEP.TabIndex = 0;
             this.lblCEP.Text = "CEP:";
             // 
-            // dateTimeNascimento
-            // 
-            this.dateTimeNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeNascimento.Location = new System.Drawing.Point(9, 170);
-            this.dateTimeNascimento.Name = "dateTimeNascimento";
-            this.dateTimeNascimento.Size = new System.Drawing.Size(126, 22);
-            this.dateTimeNascimento.TabIndex = 27;
-            // 
             // FormCadastroMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 456);
             this.Controls.Add(this.groupBox1);
-            this.MaximumSize = new System.Drawing.Size(496, 495);
+            this.MaximumSize = new System.Drawing.Size(431, 494);
             this.Name = "FormCadastroMedico";
             this.Text = "Cadastro Medico";
             this.groupBox1.ResumeLayout(false);

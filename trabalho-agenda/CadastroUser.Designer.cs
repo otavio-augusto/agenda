@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mskdCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -37,10 +39,8 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCidade = new System.Windows.Forms.Label();
             this.lblRua = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.mskdCPF = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,22 @@
             this.groupBox1.Size = new System.Drawing.Size(368, 223);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // mskdCPF
+            // 
+            this.mskdCPF.Location = new System.Drawing.Point(13, 179);
+            this.mskdCPF.Mask = "000,000,000-00";
+            this.mskdCPF.Name = "mskdCPF";
+            this.mskdCPF.Size = new System.Drawing.Size(118, 22);
+            this.mskdCPF.TabIndex = 24;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(150, 179);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(194, 22);
+            this.txtSenha.TabIndex = 22;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtMail
             // 
@@ -129,14 +145,6 @@
             this.lblRua.TabIndex = 1;
             this.lblRua.Text = "CPF:";
             // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(150, 179);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(194, 22);
-            this.txtSenha.TabIndex = 22;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -158,14 +166,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Cadastro de novo usuário";
             // 
-            // mskdCPF
-            // 
-            this.mskdCPF.Location = new System.Drawing.Point(13, 179);
-            this.mskdCPF.Mask = "000,000,000-00";
-            this.mskdCPF.Name = "mskdCPF";
-            this.mskdCPF.Size = new System.Drawing.Size(118, 22);
-            this.mskdCPF.TabIndex = 24;
-            // 
             // CadastroUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,6 +174,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(432, 382);
+            this.MinimumSize = new System.Drawing.Size(432, 382);
             this.Name = "CadastroUser";
             this.Text = "Cadastro Usuário";
             this.groupBox1.ResumeLayout(false);

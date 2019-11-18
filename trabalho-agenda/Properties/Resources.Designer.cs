@@ -59,5 +59,15 @@ namespace trabalho_agenda.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7d28b59a_293a_40d9_a2af_17ee0ed402dd_200x200 {
+            get {
+                object obj = ResourceManager.GetObject("7d28b59a-293a-40d9-a2af-17ee0ed402dd_200x200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
