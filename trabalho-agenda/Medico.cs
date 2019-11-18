@@ -8,6 +8,7 @@ namespace trabalho_agenda
 {
     public class Medico:Pessoa
     {
-        public string Especialidade { get; set; }      
+        public string Especialidade { get; set; }
+        public string Senha { get; set; }
     }
 }
