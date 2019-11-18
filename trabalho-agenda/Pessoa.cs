@@ -12,7 +12,7 @@ namespace trabalho_agenda
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Telefone { get; set; }
-        public string EMail { get; set; }
+        public string Email { get; set; }
         public DateTime DataNasc { get; set; }
         public Endereco Endereço { get; set; }
 

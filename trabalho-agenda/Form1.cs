@@ -46,7 +46,8 @@ namespace trabalho_agenda
 
         private void cadastrarMédicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FormCadastroMedico Form = new FormCadastroMedico();
+            Form.Show();
         }
 
         private void cadastrarConsultaToolStripMenuItem_Click(object sender, EventArgs e)

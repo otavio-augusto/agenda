@@ -32,6 +32,28 @@ namespace trabalho_agenda
             Raiz.Save(arquivo);                       //Salva o arquivo XML.
         }
 
+        public void Serializar(T objeto, string arquivo, bool append = true)
+        {
+            Criar(arquivo);
+            XmlSerializer serializer = new XmlSerializer(objeto.GetType());
+            XElement Raiz = XElement.Load(arquivo);
+            XElement xElement;
+            using (var stream = new MemoryStream())    //Memory Stream usa a memoria para salvar.
+            {                                          //Using fecha a Stream automaticamente.
+                XmlSerializerNamespaces nameSpace = new XmlSerializerNamespaces();
+                nameSpace.Add("", "");                            //Remove notações desnecessarias.
+                serializer.Serialize(stream, objeto, nameSpace);  //Salva os dados serializados na memoria.
+                stream.Position = 0;
+                using (XmlReader reader = XmlReader.Create(stream))
+                {
+                    xElement = new XElement(objeto.GetType().ToString());   //Adiciona o elemento raiz.
+                    xElement.Add(XElement.Load(reader)); //Adiciona os Dados na Memoria ao XElement.
+                }
+            }
+            Raiz.Add(xElement.Elements());            //Adiciona o XElement.
+            Raiz.Save(arquivo);                       //Salva o arquivo XML.
+        }
+
         public List<T> Deserializar(string arquivo)
         {
             Criar(arquivo);
