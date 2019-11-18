@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace trabalho_agenda
 {
-    public class Medico:Pessoa
+    public class Usuario:Pessoa
     {
-        public string Especialidade { get; set; }
         public string Senha { get; set; }
     }
 }
