@@ -51,20 +51,12 @@ namespace trabalho_agenda
             {
                 if (User.CPF == x.CPF)
                 {
-                    AchouCPF = true;
                     if (User.Senha == x.Senha)
                     {
-                        AchouSenha = true;                        
+                        MenuPrincipal Form = new MenuPrincipal();
+                        Form.Show();
                     }
                 }
-            }
-            if (AchouSenha == true && AchouCPF == true)
-            {
-                
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha incorretos!");
             }
        
         }

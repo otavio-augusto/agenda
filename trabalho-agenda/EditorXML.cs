@@ -60,14 +60,9 @@ namespace trabalho_agenda
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             using (FileStream fileStream = new FileStream(arquivo, FileMode.Open))
             {
-                try
-                {
+ 
                     return (List<T>)serializer.Deserialize(fileStream);
-                }
-                catch (Exception)
-                {
-                    return new List<T>();
-                }
+
                 
             }
         }

@@ -53,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 30);
+            this.label2.Location = new System.Drawing.Point(6, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 16);
             this.label2.TabIndex = 5;
@@ -62,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 82);
+            this.label3.Location = new System.Drawing.Point(6, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 6;
@@ -72,38 +72,41 @@
             // 
             this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.mskdCPF);
+            this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.linkPrim);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(27, 82);
+            this.groupBox1.Location = new System.Drawing.Point(12, 82);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 169);
+            this.groupBox1.Size = new System.Drawing.Size(213, 186);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(28, 102);
+            this.txtSenha.Location = new System.Drawing.Point(9, 81);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(123, 22);
+            this.txtSenha.Size = new System.Drawing.Size(189, 22);
             this.txtSenha.TabIndex = 10;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // mskdCPF
             // 
-            this.mskdCPF.Location = new System.Drawing.Point(28, 53);
+            this.mskdCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskdCPF.Location = new System.Drawing.Point(9, 37);
             this.mskdCPF.Mask = "000,000,000-00";
             this.mskdCPF.Name = "mskdCPF";
-            this.mskdCPF.Size = new System.Drawing.Size(123, 22);
+            this.mskdCPF.Size = new System.Drawing.Size(189, 22);
             this.mskdCPF.TabIndex = 9;
             // 
             // linkPrim
             // 
             this.linkPrim.AutoSize = true;
-            this.linkPrim.Location = new System.Drawing.Point(28, 138);
+            this.linkPrim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkPrim.Location = new System.Drawing.Point(6, 159);
             this.linkPrim.Name = "linkPrim";
-            this.linkPrim.Size = new System.Drawing.Size(106, 16);
+            this.linkPrim.Size = new System.Drawing.Size(81, 13);
             this.linkPrim.TabIndex = 7;
             this.linkPrim.TabStop = true;
             this.linkPrim.Text = "Primeiro acesso";
@@ -113,9 +116,9 @@
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(222, 257);
+            this.btnLogin.Location = new System.Drawing.Point(9, 109);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 27);
+            this.btnLogin.Size = new System.Drawing.Size(189, 27);
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -123,10 +126,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::trabalho_agenda.Properties.Resources._7d28b59a_293a_40d9_a2af_17ee0ed402dd_200x200;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 11);
+            this.pictureBox1.Image = global::trabalho_agenda.Properties.Resources.logo_horizontal;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(213, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -135,13 +138,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 312);
+            this.ClientSize = new System.Drawing.Size(239, 278);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(341, 350);
-            this.MinimumSize = new System.Drawing.Size(341, 350);
+            this.MaximumSize = new System.Drawing.Size(255, 316);
+            this.MinimumSize = new System.Drawing.Size(255, 316);
             this.Name = "TelaLogin";
             this.Text = "Login";
             this.groupBox1.ResumeLayout(false);
