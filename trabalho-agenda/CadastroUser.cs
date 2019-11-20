@@ -45,7 +45,9 @@ namespace trabalho_agenda
             }
             else
             {
-                Ed.Serializar(User, "usuarios.xml");
+                List<Usuario> usuarios = new List<Usuario>();
+                usuarios.Add(User);
+                Ed.Serializar(usuarios, "usuarios.xml");
             }
 
         }

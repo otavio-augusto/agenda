@@ -23,10 +23,9 @@ namespace trabalho_agenda
             {
                 serializer.Serialize(stream, lista);  //Salva os dados serializados na memoria.
                 stream.Position = 0;
-
-                using (XmlReader reader = XmlReader.Create(stream))//Cria um leitor de XML
+                using (XmlReader reader = XmlReader.Create(stream)) //Cria um leitor de XML
                 {
-                    xElement = XElement.Load(reader); //Cria um XElement apartir do "arquivo" na memoria.
+                    xElement = XElement.Load(reader);               //Cria um XElement apartir do "arquivo" na memoria.
                 }
             }
             Raiz.Add(xElement.Elements());  //Adiciona o XElement

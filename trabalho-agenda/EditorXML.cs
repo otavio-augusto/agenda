@@ -34,24 +34,9 @@ namespace trabalho_agenda
 
         public void Serializar(T objeto, string arquivo, bool append = true)
         {
-            Criar(arquivo);
-            XmlSerializer serializer = new XmlSerializer(objeto.GetType());
-            XElement Raiz = XElement.Load(arquivo);
-            XElement xElement;
-            using (var stream = new MemoryStream())    //Memory Stream usa a memoria para salvar.
-            {                                          //Using fecha a Stream automaticamente.
-                XmlSerializerNamespaces nameSpace = new XmlSerializerNamespaces();
-                nameSpace.Add("", "");                            //Remove notações desnecessarias.
-                serializer.Serialize(stream, objeto, nameSpace);  //Salva os dados serializados na memoria.
-                stream.Position = 0;
-                using (XmlReader reader = XmlReader.Create(stream))
-                {
-                    xElement = new XElement(objeto.GetType().ToString());   //Adiciona o elemento raiz.
-                    xElement.Add(XElement.Load(reader)); //Adiciona os Dados na Memoria ao XElement.
-                }
-            }
-            Raiz.Add(xElement.Elements());            //Adiciona o XElement.
-            Raiz.Save(arquivo);                       //Salva o arquivo XML.
+            List <T> aux = new List<T>();
+            aux.Add(objeto);
+            Serializar(lista:aux, arquivo);
         }
 
         public List<T> Deserializar(string arquivo)
@@ -60,10 +45,14 @@ namespace trabalho_agenda
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             using (FileStream fileStream = new FileStream(arquivo, FileMode.Open))
             {
- 
+                try
+                {
                     return (List<T>)serializer.Deserialize(fileStream);
-
-                
+                }
+                catch (Exception)
+                {
+                    return new List<T>();
+                }
             }
         }
 
@@ -98,7 +87,7 @@ namespace trabalho_agenda
         public void Criar(string arquivo)
         {
             if (!File.Exists(arquivo))
-                new XDocument(new XElement("root")).Save(arquivo);
+                new XDocument(new XElement("root","")).Save(arquivo);
         }
     }
 }
