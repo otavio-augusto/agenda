@@ -48,6 +48,34 @@ namespace trabalho_agenda
             fileStream.Close();
             return lista;
         }
+
+        public void Alterar(string arquivo, XElement oldElemento, XElement newElemento)
+        {
+            XDocument xDocument = XDocument.Load(arquivo);
+            var pesquisa = from x in xDocument.Elements(oldElemento.Name) // Procura um XElement
+                           where (x == oldElemento)                         // Com o valor do antigo
+                           select x;
+
+            foreach (XElement xElement in pesquisa)                       // Para cada elemento igual
+                xElement.ReplaceWith(newElemento);                        // Substitui as entradas
+
+            xDocument.Save(arquivo);                                      // Salva as alterações
+        }
+
+        public void Deletar(string arquivo, XElement oldElemento)
+        {
+            Criar(arquivo);
+            XDocument xDocument = XDocument.Load(arquivo);
+            var pesquisa = from x in xDocument.Elements(oldElemento.Name) // Procura um XElement
+                           where (x == oldElemento)                       // Com o valor do antigo
+                           select x;
+
+            foreach (XElement xElement in pesquisa)                       // Para cada elemento igual
+                xElement.Remove();                                        // Deleta as entradas
+
+            xDocument.Save(arquivo);                                      // Salva as alterações
+        }
+
         public void Criar(string arquivo)
         {
             if (!File.Exists(arquivo))
