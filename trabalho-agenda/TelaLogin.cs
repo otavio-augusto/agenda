@@ -42,7 +42,7 @@ namespace trabalho_agenda
             User.Senha = txtSenha.Text;
 
             EditorXML<Usuario> Ed = new EditorXML<Usuario>();
-            List<Usuario> ListUsuarios = Ed.Deserializar("usuarios.xml");
+            List<Usuario> ListUsuarios = (List<Usuario>) Ed.Deserializar("usuarios.xml", typeof(Usuario));
 
             bool AchouCPF = false;
             bool AchouSenha = false;

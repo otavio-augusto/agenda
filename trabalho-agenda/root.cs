@@ -7,8 +7,9 @@ using System.Xml.Serialization;
 
 namespace trabalho_agenda
 {
-    public class Usuario:Pessoa
+    public class root<T>
     {
-        public string Senha { get; set; }
+        [XmlElement("root")]
+        public List<T> lista = new List<T>();
     }
 }

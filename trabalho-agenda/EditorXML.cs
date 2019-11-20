@@ -39,20 +39,15 @@ namespace trabalho_agenda
             Serializar(lista:aux, arquivo);
         }
 
-        public List<T> Deserializar(string arquivo)
+        public List<T> Deserializar(string arquivo, Type type)
         {
             Criar(arquivo);
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            XmlSerializer serializer = new XmlSerializer(typeof(Usuario),new XmlRootAttribute("root"));
             using (FileStream fileStream = new FileStream(arquivo, FileMode.Open))
             {
-                try
-                {
-                    return (List<T>)serializer.Deserialize(fileStream);
-                }
-                catch (Exception)
-                {
-                    return new List<T>();
-                }
+                root<T> x = new root<T>();
+                x = (root<T>)serializer.Deserialize(fileStream);
+                return x.lista; 
             }
         }
 
