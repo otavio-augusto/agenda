@@ -56,5 +56,29 @@ namespace trabalho_agenda
             End.Estado = txtEstado.Text;
             End.CEP = mskdCep.Text;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Paciente Pac = new Paciente();
+            Pac.CPF = mskdCPF.Text;
+
+            EditorXML<Paciente> Ed = new EditorXML<Paciente>();
+            List<Paciente> ListaPacientes = (List<Paciente>)Ed.Deserializar("pacientes.xml", typeof(Paciente));
+
+            string Mensagem = "Os dados do usuário de CPF especificado serão alderados";
+            string Janela = "Atenção" ;          
+            MessageBoxButtons Buttons = MessageBoxButtons.OKCancel;
+            DialogResult resultado = MessageBox.Show(Janela, Mensagem, Buttons);
+            if(resultado == DialogResult.OK)
+            {
+                this.Close();
+                foreach (Paciente x in ListaPacientes)
+                {
+                    if()
+                }
+                MessageBox.Show("Dados alterados com sucesso", "Mensagem", MessageBoxButtons.OK);
+
+            }
+        }
     }
 }

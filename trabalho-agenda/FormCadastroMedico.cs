@@ -57,5 +57,10 @@ namespace trabalho_agenda
                 MessageBox.Show("CEP digitado inválido");
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Os dados do usuário de CPF especificado serão alderados","Atenção!",MessageBoxButtons.OKCancel);
+        }
     }
 }

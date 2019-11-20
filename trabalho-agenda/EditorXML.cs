@@ -36,7 +36,7 @@ namespace trabalho_agenda
         {
             List <T> aux = new List<T>();
             aux.Add(objeto);
-            Serializar(lista:aux, arquivo);
+            Serializar(lista:aux, arquivo:arquivo);
         }
 
         public List<T> Deserializar(string arquivo, Type type)
