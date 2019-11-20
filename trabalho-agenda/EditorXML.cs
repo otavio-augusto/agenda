@@ -25,9 +25,15 @@ namespace trabalho_agenda
 
         public void Serializar(T objeto, string arquivo)
         {
+<<<<<<< HEAD
+            List <T> aux = new List<T>();
+            aux.Add(objeto);
+            Serializar(lista:aux, arquivo:arquivo);
+=======
             List<T> lista = new List<T>();
             lista.Add(objeto);
             Serializar(lista, arquivo);
+>>>>>>> 0248d9e2a25ec3817c09350a41be1b44c23efdbe
         }
 
         public List<T> Deserializar(string arquivo)

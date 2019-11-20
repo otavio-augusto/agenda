@@ -23,7 +23,7 @@ namespace trabalho_agenda
             medico.Nome = textNome.Text;
             medico.CPF = maskedTextCPF.Text;
             medico.DataNasc = dateTimeNascimento.Value;
-            medico.Email = textBoxEmail.Text;
+            medico.Email = textEmail.Text;
             medico.Especialidade = textEspecialidade.Text;
             medico.Telefone = textTelefone.Text;
             Endereco endereco = new Endereco();
@@ -55,6 +55,56 @@ namespace trabalho_agenda
             catch
             {
                 MessageBox.Show("CEP digitado inválido");
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Medico Med = new Medico();
+            Endereco End = new Endereco();
+            Med.CPF = maskedTextCPF.Text;
+
+
+
+            EditorXML<Medico> Ed = new EditorXML<Medico>();
+            List<Medico> ListaPacientes = (List<Medico>)Ed.Deserializar("medicos.xml");
+
+            string Mensagem = "Os dados do usuário de CPF especificado serão alderados";
+            string Janela = "Atenção";
+            MessageBoxButtons Buttons = MessageBoxButtons.OKCancel;
+            DialogResult resultado = MessageBox.Show(Janela, Mensagem, Buttons);
+            if (resultado == DialogResult.OK)
+            {
+                this.Close();
+                foreach (Medico x in ListaPacientes)
+                {
+                    if (Med.CPF == x.CPF)
+                    {
+                        Med.Nome = textNome.Text;
+                        Med.Email = textEmail.Text;
+                        Med.CPF = maskedTextCPF.Text;
+                        Med.Telefone = textTelefone.Text;
+                        Med.DataNasc = dateTimeNascimento.Value;
+                        Med.Especialidade = textEspecialidade.Text;
+
+                        End.Rua = txtRua.Text;
+                        End.Bairro = txtBairro.Text;
+                        End.Cidade = txtCidade.Text;
+                        End.Complemento = txtComp.Text;
+                        End.Estado = txtEstado.Text;
+                        End.CEP = mskdCep.Text;
+                        Med.Endereço = End;
+
+                        Ed.Serializar(Med, "medicos.xml");
+
+                        MessageBox.Show("Dados alterados com sucesso", "Mensagem", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("CPF não encontrado", "Mensagem", MessageBoxButtons.OK);
+                    }
+                }
+
             }
         }
     }

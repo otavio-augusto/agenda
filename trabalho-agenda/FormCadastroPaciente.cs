@@ -48,13 +48,63 @@ namespace trabalho_agenda
             Pac.Email = textEmail.Text;
             Pac.CPF = mskdCPF.Text;
             Pac.Telefone = textTelefone.Text;
-            Pac.DataNasc = dtDataNasc.Value;
+            Pac.DataNasc = dateTimeNascimento.Value;
             End.Rua = txtRua.Text;
             End.Bairro = txtBairro.Text;
             End.Cidade = txtCidade.Text;
             End.Complemento = txtComp.Text;
             End.Estado = txtEstado.Text;
             End.CEP = mskdCep.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Paciente Pac = new Paciente();
+            Endereco End = new Endereco();
+            Pac.CPF = mskdCPF.Text;
+
+            
+
+            EditorXML<Paciente> Ed = new EditorXML<Paciente>();
+            List<Paciente> ListaPacientes = (List<Paciente>)Ed.Deserializar("pacientes.xml");
+
+            string Mensagem = "Os dados do usuário de CPF especificado serão alderados";
+            string Janela = "Atenção" ;          
+            MessageBoxButtons Buttons = MessageBoxButtons.OKCancel;
+            DialogResult resultado = MessageBox.Show(Janela, Mensagem, Buttons);
+            if(resultado == DialogResult.OK)
+            {
+                this.Close();
+                foreach (Paciente x in ListaPacientes)
+                {
+                    if(Pac.CPF == x.CPF)
+                    {
+                        Pac.Nome = textNome.Text;
+                        Pac.Email = textEmail.Text;
+                        Pac.CPF = mskdCPF.Text;
+                        Pac.Telefone = textTelefone.Text;
+                        Pac.DataNasc = dateTimeNascimento.Value;
+                        Pac.TipoSang = selectTipoSang.Text;
+                        
+                        End.Rua = txtRua.Text;
+                        End.Bairro = txtBairro.Text;
+                        End.Cidade = txtCidade.Text;
+                        End.Complemento = txtComp.Text;
+                        End.Estado = txtEstado.Text;
+                        End.CEP = mskdCep.Text;
+                        Pac.Endereço = End;
+
+                        Ed.Serializar(Pac, "pacientes.xml");
+
+                        MessageBox.Show("Dados alterados com sucesso", "Mensagem", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("CPF não encontrado", "Mensagem", MessageBoxButtons.OK);
+                    }
+                }
+
+            }
         }
     }
 }

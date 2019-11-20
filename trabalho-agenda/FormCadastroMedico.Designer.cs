@@ -35,7 +35,7 @@
             this.maskedTextCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.textEspecialidade = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
             this.textTelefone = new System.Windows.Forms.TextBox();
             this.textNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.groupBox1.Controls.Add(this.maskedTextCPF);
             this.groupBox1.Controls.Add(this.lblCPF);
             this.groupBox1.Controls.Add(this.textEspecialidade);
-            this.groupBox1.Controls.Add(this.textBoxEmail);
+            this.groupBox1.Controls.Add(this.textEmail);
             this.groupBox1.Controls.Add(this.textTelefone);
             this.groupBox1.Controls.Add(this.textNome);
             this.groupBox1.Controls.Add(this.label1);
@@ -114,6 +114,7 @@
             this.btnAlterar.TabIndex = 26;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // buttonCadastrar
             // 
@@ -149,12 +150,12 @@
             this.textEspecialidade.Size = new System.Drawing.Size(93, 22);
             this.textEspecialidade.TabIndex = 21;
             // 
-            // textBoxEmail
+            // textEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(9, 125);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(364, 22);
-            this.textBoxEmail.TabIndex = 20;
+            this.textEmail.Location = new System.Drawing.Point(9, 125);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(364, 22);
+            this.textEmail.TabIndex = 20;
             // 
             // textTelefone
             // 
@@ -347,7 +348,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.TextBox textEspecialidade;
-        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.TextBox textTelefone;
         private System.Windows.Forms.TextBox textNome;
         private System.Windows.Forms.Label label1;

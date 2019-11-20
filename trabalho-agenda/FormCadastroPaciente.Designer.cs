@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
-            this.dtDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeNascimento = new System.Windows.Forms.DateTimePicker();
             this.selectTipoSang = new System.Windows.Forms.ComboBox();
             this.mskdCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             // 
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.buttonCadastrar);
-            this.groupBox1.Controls.Add(this.dtDataNasc);
+            this.groupBox1.Controls.Add(this.dateTimeNascimento);
             this.groupBox1.Controls.Add(this.selectTipoSang);
             this.groupBox1.Controls.Add(this.mskdCPF);
             this.groupBox1.Controls.Add(this.lblCPF);
@@ -104,6 +104,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "Alterar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonCadastrar
             // 
@@ -116,13 +117,13 @@
             this.buttonCadastrar.UseVisualStyleBackColor = true;
             this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
-            // dtDataNasc
+            // dateTimeNascimento
             // 
-            this.dtDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDataNasc.Location = new System.Drawing.Point(13, 172);
-            this.dtDataNasc.Name = "dtDataNasc";
-            this.dtDataNasc.Size = new System.Drawing.Size(126, 22);
-            this.dtDataNasc.TabIndex = 26;
+            this.dateTimeNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeNascimento.Location = new System.Drawing.Point(13, 172);
+            this.dateTimeNascimento.Name = "dateTimeNascimento";
+            this.dateTimeNascimento.Size = new System.Drawing.Size(126, 22);
+            this.dateTimeNascimento.TabIndex = 26;
             // 
             // selectTipoSang
             // 
@@ -352,7 +353,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonCadastrar;
-        private System.Windows.Forms.DateTimePicker dtDataNasc;
+        private System.Windows.Forms.DateTimePicker dateTimeNascimento;
         private System.Windows.Forms.ComboBox selectTipoSang;
         private System.Windows.Forms.MaskedTextBox mskdCPF;
         private System.Windows.Forms.Label lblCPF;
