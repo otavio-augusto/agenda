@@ -29,7 +29,7 @@ namespace trabalho_agenda
             bool AchouUser = false;
 
             EditorXML<Usuario> Ed = new EditorXML<Usuario>();
-            List<Usuario> ListaUser = Ed.Deserializar("usuarios.xml", typeof(Usuario));
+            List<Usuario> ListaUser = new List<Usuario>();
 
             foreach (Usuario x in ListaUser)
             {
