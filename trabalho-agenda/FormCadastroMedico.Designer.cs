@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimeNascimento = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.maskedTextCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimeNascimento);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnAlterar);
             this.groupBox1.Controls.Add(this.buttonCadastrar);
             this.groupBox1.Controls.Add(this.maskedTextCPF);
             this.groupBox1.Controls.Add(this.lblCPF);
@@ -90,9 +90,11 @@
             this.groupBox1.Controls.Add(this.lblCEP);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.MaximumSize = new System.Drawing.Size(391, 432);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(391, 432);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(391, 432);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // dateTimeNascimento
@@ -103,24 +105,25 @@
             this.dateTimeNascimento.Size = new System.Drawing.Size(126, 22);
             this.dateTimeNascimento.TabIndex = 27;
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Location = new System.Drawing.Point(87, 385);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlterar.Location = new System.Drawing.Point(289, 398);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(84, 23);
+            this.btnAlterar.TabIndex = 26;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(6, 385);
+            this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCadastrar.Location = new System.Drawing.Point(194, 398);
             this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrar.Size = new System.Drawing.Size(89, 23);
             this.buttonCadastrar.TabIndex = 25;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
-            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // maskedTextCPF
             // 
@@ -274,7 +277,6 @@
             this.btnConsultar.TabIndex = 5;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblUF
             // 
@@ -339,6 +341,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimeNascimento;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button buttonCadastrar;
         private System.Windows.Forms.MaskedTextBox maskedTextCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.TextBox textEspecialidade;
@@ -363,8 +368,5 @@
         private System.Windows.Forms.Label lblBairro;
         private System.Windows.Forms.Label lblRua;
         private System.Windows.Forms.Label lblCEP;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonCadastrar;
-        private System.Windows.Forms.DateTimePicker dateTimeNascimento;
     }
 }

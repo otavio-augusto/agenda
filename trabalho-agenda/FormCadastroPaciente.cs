@@ -39,5 +39,22 @@ namespace trabalho_agenda
 
             }
         }
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            Paciente Pac = new Paciente();
+            Endereco End = new Endereco();
+            Pac.Nome = textNome.Text;
+            Pac.Email = textEmail.Text;
+            Pac.CPF = mskdCPF.Text;
+            Pac.Telefone = textTelefone.Text;
+            Pac.DataNasc = dtDataNasc.Value;
+            End.Rua = txtRua.Text;
+            End.Bairro = txtBairro.Text;
+            End.Cidade = txtCidade.Text;
+            End.Complemento = txtComp.Text;
+            End.Estado = txtEstado.Text;
+            End.CEP = mskdCep.Text;
+        }
     }
 }
